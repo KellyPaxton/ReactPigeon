@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #000;
 }
 
 .App-logo {
@@ -10,10 +11,13 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin 1.5s linear;
+    animation: App-logo-spin 2 1s linear; 
   }
   h1 {
     animation: slide-in 1.5s linear;
+  }
+  .App-header {
+    animation: slide-up 1.5s linear;
   }
 }
 
@@ -45,9 +49,18 @@ h1 {
 
 @keyframes slide-in {
  0%   { 
- transform: translateX(200%); 		
+ transform: translateY(-200%); 		
  }
  100% { 
- transform: translateX(0%); 
+ transform: translateY(0%); 
  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
